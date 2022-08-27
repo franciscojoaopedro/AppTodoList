@@ -41,22 +41,23 @@ const App=()=>{
         console.log('sem tarefas, Adiciona as tarefas')
         return
     }
-        data.forEach((tarefa)=>{
-                let li=document.createElement('li')
-                let h3=document.createElement('h3')
-                let h4=document.createElement('h4')
-                li.classList.add('tarefa')
-                li.setAttribute('key',`${tarefa.id}`)
-                ul.appendChild(li)
-                li.append(h3)
-                li.appendChild(h4)
-                console.log(li)
-                h3.textContent=tarefa.task
-                h4.textContent=tarefa.description
-               /* li.innerHTML=`<h3>${tarefa.task}</h3>
-                <h4>${tarefa.description}</h4>
-                `*/
-               })
+    const createElementEaddLi=(tarefa)=>{
+        let li=document.createElement('li')
+        let h3=document.createElement('h3')
+        let h4=document.createElement('h4')
+        li.classList.add('tarefa')
+        li.setAttribute('key',`${tarefa.id}`)
+        ul.appendChild(li)
+        li.append(h3)
+        li.appendChild(h4)
+        console.log(li)
+        h3.textContent=tarefa.task
+        h4.textContent=tarefa.description
+       /* li.innerHTML=`<h3>${tarefa.task}</h3>
+        <h4>${tarefa.description}</h4>
+        `*/
+       }
+        data.forEach(createElementEaddLi)
     }
     const clearAllTasksInLocalStorage=()=>{
         localStorage.clear('tasks')
