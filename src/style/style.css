@@ -1,0 +1,145 @@
+header{
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #0077ffc9;
+    align-items:center ;
+    padding-bottom: 20px;
+}
+header nav h2{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+section{
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 20px;
+}
+section main{
+    width: 700px;
+    max-width:  500px;
+    border-radius: 5px;
+    background-color: rgba(0, 204, 255, 0.521);
+    padding-top: 20px;
+    padding-bottom: 30px;
+   
+}
+/* input*/
+.inputTask{
+    width: 70%;
+    max-width: 400px;
+    height: 50px;
+    line-height: 1.8rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color:  #021122;
+    opacity: 0.8;
+    margin: 5px;
+}
+.inputTask::placeholder{
+    color: white;
+}
+.btn-addTask,.btn-ShowAllTasks{
+    width: 60%;
+    height: 40px;
+    background-color: #00ffbfe5;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 50px;
+     margin: 5px;
+     color: #ffffff;
+     transition: background-color .6s ease-in-out;
+}
+.btn-ShowAllTasks{
+    background-color: #00ccfff1;
+    width: 150px;
+    height: 30px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.btn-clearAllTasks{
+    background-color: #ff8800e7;
+    width: 150px;
+    height: 30px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 50px;
+     margin: 5px;
+     color: #ffffff;
+}
+.btns-ver-apagar{
+    display: flex;
+    justify-content: center;
+
+}
+.btn-addTask:hover{
+    background-color: #ffffff;
+    color: #00ffbfe5;
+}
+.inputs{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 20px;
+padding-bottom: 50px;
+}
+.boxTaks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxTaks ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.listTask h2{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.tarefa{
+    width: 100%;
+    max-width: 350px;
+    background-color: #00ffd52a;
+    margin: 5px;
+    border:2px ridge #11b0d8c7;
+    border-radius: 6px;
+    line-height: 1.8rem;
+}
+
+
+
+
+
+
+
+footer{
+    position: relative;
+    top: 350px;
+    width: 100%;
+    height: 80px;
+    padding-top: 10px;
+    margin-top: 20px;
+    background-color: #012650e8;
+
+    padding-bottom: 10px;
+}
+
+footer nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+}

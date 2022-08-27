@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffff;
+    
+}
+body{
+    background-color: #021122;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+html{
+    font-size: 62.5%;
+}
+button{
+    cursor: pointer;
+}
+.container{
+    width: 100%;
+    max-width: 1246px;
+    margin: 0 auto;
+    padding: 8px 15px;
+}
+.container-fluid{
+    width: 100%;
+    padding: 8px 15px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
