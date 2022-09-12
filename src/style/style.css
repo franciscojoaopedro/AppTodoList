@@ -50,7 +50,7 @@ section main{
     color: white;
 }
 .btn-addTask,.btn-ShowAllTasks{
-    width: 15%;
+    width: 20%;
     height: 30px;
     background-color: #00ffbfe5;
     font-size: 14px;
@@ -61,10 +61,7 @@ section main{
      transition: background-color .6s ease-in-out;
 }
 .btn-addTask{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30vh;
+
 }
 .btn-ShowAllTasks{
     background-color: #00ccfff1;
