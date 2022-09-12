@@ -3,7 +3,7 @@ const inputDescription=document.querySelector(' .description')
 const btnAdicionar=document.querySelector('.btn-addTask')
 const btnMostrarTaks=document.querySelector('.btn-ShowAllTasks')
 const btnApagarTodasTasks=document.querySelector('.btn-clearAllTasks')
-const semTask=document.querySelector('')
+const semTask=document.querySelector('.sem-task')
 //const btnApagarUmaTask=document.querySelector('')
 const ul=document.querySelector('.ontaskList')
 
@@ -29,27 +29,23 @@ const Task=class{
    let task=[]
    const App=()=>{
 
-    const removeElement=()=>{
-        console.log("bontao remover")
-    }
     const setTaskInLocalStorage=()=>{
         localStorage.setItem('tasks',JSON.stringify(task))
     }
-    const apagarUmaTask=(id)=>{
-        
-    }
-
-
-    
-    const getTasksInLocalStorage=()=>{
-        
-       const data=JSON.parse(localStorage.getItem('tasks'))
-    if(data===null){
-        console.log('sem tarefas, Adiciona as tarefas')
-
-        return
+    const mostrarBtnMsgErro=()=>{
+        let data=JSON.parse(localStorage.getItem('tasks'))
+        if(data===null){
+        semTask.style.display="block"
+        btnApagarTodasTasks.style.display="none"
+        }
+        semTask.style.display="none"
+        btnApagarTodasTasks.style.display="block"
     }
   
+    const getTasksInLocalStorage=async ()=>{
+    let data= await JSON.parse(localStorage.getItem('tasks'))
+    mostrarBtnMsgErro()
+ 
     const createElementEaddLi=(tarefa)=>{
         let buttonRemover=document.createElement('button')
         let li=document.createElement('li')
@@ -66,11 +62,16 @@ const Task=class{
         ul.appendChild(li)
         li.append(h3)
         li.appendChild(p)
-        console.log(li)
         h3.textContent=tarefa.task
         p.textContent=tarefa.description
+
+        console.log(li.children)
        }
-        data.forEach(createElementEaddLi)
+       if(ul.children){
+           data.forEach(createElementEaddLi)
+         
+       }
+
     }
     const clearAllTasksInLocalStorage=()=>{
         ul.remove()
@@ -107,7 +108,8 @@ const Task=class{
         }*/
     }
     btnApagarTodasTasks.addEventListener('click',clearAllTasksInLocalStorage)
-    btnAdicionar.addEventListener('click',adicionarTask)  
+    btnAdicionar.addEventListener('click',adicionarTask) 
+
     btnMostrarTaks.addEventListener('click',getTasksInLocalStorage)
     
 }

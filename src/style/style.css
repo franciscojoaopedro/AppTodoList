@@ -24,21 +24,22 @@ section main{
     width: 700px;
     max-width:  500px;
     border-radius: 5px;
-    background-color: rgba(0, 204, 255, 0.521);
+    background-color: #cad4d654;
     padding-top: 20px;
     padding-bottom: 30px;
+    box-shadow: 2px -2px 12px #104e4a;
    
 }
 /* input*/
 .inputTask{
     width: 70%;
     max-width: 400px;
-    height: 50px;
+    border: none;
+    height: 40px;
     line-height: 1.8rem;
     text-align: center;
     font-size: 1.4rem;
     font-weight: 600;
-    border: 2px solid white;
     border-radius: 5px;
     color: white;
     background-color:  #021122;
@@ -49,32 +50,40 @@ section main{
     color: white;
 }
 .btn-addTask,.btn-ShowAllTasks{
-    width: 60%;
-    height: 40px;
+    width: 15%;
+    height: 30px;
     background-color: #00ffbfe5;
-    font-size: 1.8rem;
-    font-weight: 500;
-    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
      margin: 5px;
      color: #ffffff;
      transition: background-color .6s ease-in-out;
 }
+.btn-addTask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30vh;
+}
 .btn-ShowAllTasks{
     background-color: #00ccfff1;
-    width: 150px;
+    width: 25vw;
     height: 30px;
     font-size: 1.4rem;
     font-weight: 400;
 }
 .btn-clearAllTasks{
+    display: none;
     background-color: #ff8800e7;
-    width: 150px;
+    width: 100px;
     height: 30px;
     font-size: 1.4rem;
     font-weight: 400;
-    border-radius: 50px;
+    border-radius: 8px;
      margin: 5px;
      color: #ffffff;
+     margin-left: 37vw;
 }
 .btns-ver-apagar{
     display: flex;
@@ -107,23 +116,66 @@ padding-bottom: 50px;
 .listTask h2{
     text-align: center;
     font-size: 1.8rem;
+    color: #021122;
 }
 .tarefa{
     width: 100%;
     max-width: 350px;
     background-color: #00ffd52a;
     margin: 5px;
-    border:2px ridge #11b0d8c7;
+    box-shadow: 2px 5px 10px #091b1aec;
     border-radius: 6px;
     line-height: 1.8rem;
 }
 
+.close{
+    margin: 4px;
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 4px;
+    line-height: 12ps;
+    font-weight: bold;
+    color: #ffffff;
+    left: 64%;
+    transition: all  .5s ease-in-out;
+}
+
+.close:hover{
+    background: #ffffff;
+    color: #c25252;
+}
+
+.texto{
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-top: 2px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width :100% ;
+    color: #021122;
+    word-wrap: break-word;
+}
+
+.tarefa >h3{
+    margin-left: 4px;
+    font-size: 14px;
+    color: #053b44;
+}
 
 
-
-
-
-
+.sem-task{
+    display: none;
+    width: 100%;
+    height: 20px;
+    border-radius: 4px;
+    background: #da5c5c;
+}
+.sem-task > h3{
+    padding-top: 4px;
+    font-weight: 700;
+    text-align: center;
+}
 footer{
     position: relative;
     top: 350px;
