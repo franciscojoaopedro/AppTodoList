@@ -3,6 +3,7 @@ const inputDescription=document.querySelector(' .description')
 const btnAdicionar=document.querySelector('.btn-addTask')
 const btnMostrarTaks=document.querySelector('.btn-ShowAllTasks')
 const btnApagarTodasTasks=document.querySelector('.btn-clearAllTasks')
+const semTask=document.querySelector('')
 //const btnApagarUmaTask=document.querySelector('')
 const ul=document.querySelector('.ontaskList')
 
@@ -25,42 +26,56 @@ const Task=class{
     {id:2,task:'local storage',description:'lorem vgvgvfhgjkhgfyhyhgk yufyugfgf'},
     */
    
-   const task=[
-      
-   ]
-const App=()=>{
+   let task=[]
+   const App=()=>{
+
+    const removeElement=()=>{
+        console.log("bontao remover")
+    }
     const setTaskInLocalStorage=()=>{
         localStorage.setItem('tasks',JSON.stringify(task))
     }
     const apagarUmaTask=(id)=>{
         
     }
+
+
+    
     const getTasksInLocalStorage=()=>{
+        
        const data=JSON.parse(localStorage.getItem('tasks'))
     if(data===null){
         console.log('sem tarefas, Adiciona as tarefas')
+
         return
     }
+  
     const createElementEaddLi=(tarefa)=>{
+        let buttonRemover=document.createElement('button')
         let li=document.createElement('li')
         let h3=document.createElement('h3')
-        let h4=document.createElement('h4')
+        let p=document.createElement('p')
+        
+        buttonRemover.textContent='x'
+        buttonRemover.addEventListener('click',()=>li.remove())
+        p.className='texto'
+        buttonRemover.classList.add('close')
+        li.appendChild(buttonRemover)
         li.classList.add('tarefa')
         li.setAttribute('key',`${tarefa.id}`)
         ul.appendChild(li)
         li.append(h3)
-        li.appendChild(h4)
+        li.appendChild(p)
         console.log(li)
         h3.textContent=tarefa.task
-        h4.textContent=tarefa.description
-       /* li.innerHTML=`<h3>${tarefa.task}</h3>
-        <h4>${tarefa.description}</h4>
-        `*/
+        p.textContent=tarefa.description
        }
         data.forEach(createElementEaddLi)
     }
     const clearAllTasksInLocalStorage=()=>{
+        ul.remove()
         localStorage.clear('tasks')
+        
         
     }
     const autoApagarInputValue=()=>{
@@ -98,13 +113,4 @@ const App=()=>{
 }
 
 App()
-
-
-/* task.forEach((task)=>{
-                console.log(task.task)
-               li.innerHTML=`<h3>${task.task}</h3>
-                <h4>${task.description}</h4>
-                `;
-            }
-            )*/
 
