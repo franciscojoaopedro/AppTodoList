@@ -37,15 +37,17 @@ const Task=class{
         if(data===null){
         semTask.style.display="block"
         btnApagarTodasTasks.style.display="none"
+        return
         }
         semTask.style.display="none"
         btnApagarTodasTasks.style.display="block"
+        return
     }
   
     const getTasksInLocalStorage=async ()=>{
     let data= await JSON.parse(localStorage.getItem('tasks'))
     mostrarBtnMsgErro()
- 
+
     const createElementEaddLi=(tarefa)=>{
         let buttonRemover=document.createElement('button')
         let li=document.createElement('li')
